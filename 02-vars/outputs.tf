@@ -14,7 +14,11 @@ output "Value_in_Map" {
   value = var.v3["abc"]
 }
 
+#output "Value_in_Map1" {
+#  value = var.v3["abc1"]
+#}
+
 output "Value_in_Map1" {
-  value = var.v3["abc1"]
+  value = lookup(var.v3, "abc1", null)
 }
 
