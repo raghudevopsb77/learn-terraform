@@ -19,6 +19,6 @@ output "Value_in_Map" {
 #}
 
 output "Value_in_Map1" {
-  value = lookup(var.v3, "abc1", null)
+  value = lookup(var.v3, "abc1", "none")
 }
 
