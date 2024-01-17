@@ -19,16 +19,10 @@ variable "fruits2" {
   }
 }
 
-terraform {
-  required_providers {
-    dummy = {
-      source  = "nfx02/dummy"
-    }
-  }
-}
-
-resource "dummy_thing" "this1" {
+resource "null_resource" "test1" {
   for_each = var.fruits1
-  name = "${each.key} = ${each.value}"
+  provisioner "local-exec" {
+    command = "echo ${each.key} = ${each.value}"
+  }
 }
 
