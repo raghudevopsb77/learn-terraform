@@ -22,7 +22,7 @@ variable "fruits2" {
 terraform {
   required_providers {
     dummy = {
-      source  = "nfx04/dummy"
+      source  = "nfx02/dummy"
     }
   }
 }
