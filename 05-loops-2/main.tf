@@ -19,10 +19,13 @@ variable "fruits2" {
   }
 }
 
-provider "dummy" {
-  name = "foo"
+terraform {
+  required_providers {
+    dummy = {
+      source  = "nfx04/dummy"
+    }
+  }
 }
-
 
 resource "dummy_thing" "this1" {
   for_each = var.fruits1
