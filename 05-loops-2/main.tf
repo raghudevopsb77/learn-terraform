@@ -2,7 +2,7 @@ variable "fruits1" {
   default = {
 
     banana = 100
-    apple = 10
+    apple  = 10
   }
 }
 
@@ -10,11 +10,11 @@ variable "fruits1" {
 variable "fruits2" {
   default = {
     apple = {
-      name = "apple"
+      name     = "apple"
       quantity = 10
     }
     banana = {
-      name = "banana"
+      name     = "banana"
       quantity = 100
     }
   }

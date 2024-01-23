@@ -1,8 +1,8 @@
 resource "aws_instance" "instances" {
-  count                   = length(var.components)
-  ami                     = data.aws_ami.centos8.image_id
-  instance_type           = var.instance_type
-  vpc_security_group_ids  = var.vpc_security_group_ids
+  count                  = length(var.components)
+  ami                    = data.aws_ami.centos8.image_id
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
     Name = element(var.components, count.index)

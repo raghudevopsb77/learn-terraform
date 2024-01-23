@@ -1,7 +1,7 @@
 resource "aws_instance" "frontend" {
-  ami                     = var.ami
-  instance_type           = var.instance_type
-  vpc_security_group_ids  = var.vpc_security_group_ids
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
     Name = "frontend-dev"
@@ -17,9 +17,9 @@ resource "aws_route53_record" "frontend" {
 }
 
 resource "aws_instance" "backend" {
-  ami                     = var.ami
-  instance_type           = var.instance_type
-  vpc_security_group_ids  = var.vpc_security_group_ids
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
     Name = "backend-dev"
@@ -35,9 +35,9 @@ resource "aws_route53_record" "backend" {
 }
 
 resource "aws_instance" "mysql" {
-  ami                     = var.ami
-  instance_type           = var.instance_type
-  vpc_security_group_ids  = var.vpc_security_group_ids
+  ami                    = var.ami
+  instance_type          = var.instance_type
+  vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
     Name = "mysql-dev"
